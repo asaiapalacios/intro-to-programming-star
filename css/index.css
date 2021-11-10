@@ -75,9 +75,6 @@ textarea {
 .field-inline {
   display: inline-block;
 }
-/* .field {
-  display: inline-block;
-} */
 button {
   font-family: Karla, sans-serif;
   font-size: 17px;
@@ -107,7 +104,7 @@ span {
   margin-right: 3px;
 }
 footer {
-  background-color: rgb(213, 221, 236); /* 237, 252, 252; 246, 252, 252 */
+  background-color: rgb(213, 221, 236);
   border-top: solid 0.12rem rgb(112, 128, 144);
 }
 footer p {
