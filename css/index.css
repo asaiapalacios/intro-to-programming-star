@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(232, 240, 254);
+  color: rgb(29, 39, 39);
+  font-family: Karla, sans-serif;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 90px;
+  font-weight: 300;
+  margin-bottom: 18px;
+  margin-top: 0;
+  padding-top: 100px;
+}
+h1,
+h2 {
+  color: rgb(35, 53, 53);
+}
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+.about {
+  width: 60%;
+}
+.main-section {
+  margin-top: 65px;
+}
+ul {
+  list-style-type: circle;
+  font-size: 18px;
+}
+.no-bullets {
+  list-style: none;
+}
+form label {
+  color: rgb(55, 64, 77);
+  font-size: 18px;
+}
+input,
+textarea {
+  background-color: rgb(244, 245, 244);
+  font-family: Karla, sans-serif;
+  font-size: 18px;
+  border: solid 0.15rem rgb(112, 128, 144);
+  border-radius: 7px;
+  padding: 4px 8px;
+}
+input {
+  height: 25px;
+  width: 250px;
+  margin: 0 7px 15px 0;
+}
+textarea {
+  width: 530px;
+  height: 125px;
+}
+.field_label,
+.field_input {
+  display: block;
+}
+.field_label {
+  margin-bottom: 4px;
+}
+.field-inline {
+  display: inline-block;
+}
+/* .field {
+  display: inline-block;
+} */
+button {
+  font-family: Karla, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px rgb(92, 85, 137);
+  border-radius: 7px;
+  height: 40px;
+  width: 80px;
+  padding: 1px 3px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgb(79 119 205 / 80%);
+}
+#messages h2 {
+  margin: 18px 0 0;
+}
+#messages a {
+  color: rgb(54, 36, 173);
+  font-weight: bold;
+  text-decoration-style: double;
+  text-decoration-color: rgb(54, 36, 173);
+}
+#messages ul {
+  margin: 0 0 110px;
+}
+span {
+  margin-right: 3px;
+}
+footer {
+  background-color: rgb(213, 221, 236); /* 237, 252, 252; 246, 252, 252 */
+  border-top: solid 0.12rem rgb(112, 128, 144);
+}
+footer p {
+  font-size: 20px;
+  padding: 20px 35px;
+  text-align: right;
+}
+/* responsive webpage */
+@media only screen and (max-width: 1375px) {
+  main {
+    margin-left: 60px;
+  }
+  .highlights {
+    width: 60%;
+  }
+}

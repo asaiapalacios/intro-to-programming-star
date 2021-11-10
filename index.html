@@ -4,58 +4,74 @@
         <title>Asaia | Portfolio</title>
         <meta charset="UTF-8">
         <!-- With viewport, browsers are instructed on how to control the page's dimensions and scaling -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">  
     </head>
 <body>
-    <section>
-        <h1>Asaia Palacios</h1>
+    <main>
+        <div class="container">
+        <section class="about">
+            <h1>Asaia Palacios</h1>
 
-        <p>Hola, I'm a curious go-to learner of programming. Who knew that my stint as an English and Spanish teacher in the Czech Republic some eons ago would somewhow morph into this enlightening path. Did I see it coming? Sure, my love for sketching and animation, awe for interactive websites designed for us humans in mind plus my prototyping abilities (think building Raspberry-Pi robots powered by artificial intelligence) had me swooning from the get-go and provided clues. So, naturally, I salute you, oh code editor and command line; for you see, I now recognize this much: Let the lifelong web development journey begin (eventually in the Web3 space on the frontend side for added oomph to user experiences in the blockchain). Yes, Web3 and blockchain are just around the corner! You in for the ride? I sure am.</p>
-    </section>
+            <p>Hola. I'm a curious go-to learner of web dev and all things programming. Who knew that my stint as an English and Spanish teacher in the Czech Republic some eons ago would morph into this adventurous path. Can't say that I saw it coming, though it's been quite a ride. Nowadays, find me technically exploring what's under-the-hood of Web3 and frontend technologies.</p>
+        </section>
 
-    <section>
-        <h1>Highlights</h1>
-        <ul>
-            <li>Began with C, gained some Python and Ruby knowledge; now in my JavaScript journey</li>
-            <li>I enjoy navigating the command line</li>
-            <li>Git is fun, too, though I proceed with caution (because, well, I've heard horror stories)</li>
-        </ul>
-    </section>
+        <section class="main-section highlights">
+            <h2>Highlights</h2>
+            <ul>
+                <li>Began with C, gained some Python and Ruby knowledge; now in JavaScript land</li>
+                <li>I enjoy navigating the command line</li>
+                <li>Git is fun, too, though I proceed with caution (because, well, I've heard horror stories)</li>
+            </ul>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul></ul>
-    </section>
+        <section id="skills" class="main-section">
+            <h2>Skills</h2>
+            <ul></ul>
+        </section>
 
-    <section>
-        <h1>Let's Connect</h1>
-        <ul>
-            <li>asaia.palacios@gmail.com</li>
-            <li>https://github.com/asaiapalacios</li>
-            <li>https://twitter.com/asaiapalacios</li>
-        </ul>
-    </section>
+        <section class="main-section">
+            <h2>Let's Connect</h2>
+            <ul class="no-bullets">
+                <li><a href="https://www.linkedin.com/in/asaiapalacios/" target="_blank"><img src="https://svgrepo.com/show/316913/linkedin.svg" alt="Linkedin SVG icon" height="37" width="37"></a></li>
+                
+                <li><a href="https://github.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316906/github.svg" alt="Github SVG icon" height="37" width="37"></a></li>
+                
+                <li><a href="https://twitter.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316895/twitter.svg" alt="Twitter SVG icon" height="37" width="37"></a></li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
-            <label>Name</label><br>
-            <input type="text" name="name" required="true"><br>
+        <section class="main-section">
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <div class="field field-inline">
+                    <label class="field_label">Name</label>
+                    <input class="field_input" type="text" name="name" required="true">
+                </div>
 
-            <label>Email</label><br>
-            <input type="email" name="email" required="true"><br>
+                <div class="field field-inline">
+                    <label class="field_label">Email</label>
+                    <input class="field_input" type="email" name="email" required="true">
+                </div>
 
-            <label>Message</label><br>
-            <textarea name="message" required="true"></textarea><br>
+                <div class="field">
+                    <label class="field_label">Message</label>
+                    <textarea class="field_input text_box" name="message" required="true"></textarea>
+                </div>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-       
-    <section id="messages">
-        <h2>Messages</h2>
-        <ul></ul>
-    </section>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
+        </div>
+    </main>
 
     <footer></footer>
 
