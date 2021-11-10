@@ -13,7 +13,7 @@ const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
 // set innerHTML
-copyright.innerHTML = "Asaia Palacios " + thisYear;
+copyright.innerHTML = "&copy;" + thisYear + " Asaia Palacios";
 
 // append the copyright element to the footer
 footer.appendChild(copyright);
@@ -68,7 +68,7 @@ messageForm.addEventListener("submit", (e) => {
   // create a new button
   const removeButton = document.createElement("button");
   // set inner text to "remove"
-  removeButton.innerText = "remove";
+  removeButton.innerText = "Remove";
   // set type attribute to "button"
   removeButton.setAttribute("type", "button");
   // add an event listener to the removeButton
