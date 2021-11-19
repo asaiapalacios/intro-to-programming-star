@@ -1,123 +1,400 @@
-body {
+/*******************
+      Defaults
+*******************/
+
+/* reset for a starter canvas */
+* {
   margin: 0;
   padding: 0;
-  background-color: rgb(232, 240, 254);
+  font-weight: normal;
+  /* border: 1px solid rgb(77, 196, 156); */
+}
+
+html {
+  font-size: 24px;
+  box-sizing: border-box; /* use alternative box model for all elements */
+}
+
+/* set all other elements to inherit the border-box value */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* use rem wherever possible (relative to html selector's font-size) */
+body {
+  max-width: 1160px;
+  margin: 1rem auto; /* horizontal center */
+  line-height: 1.4;
   color: rgb(29, 39, 39);
   font-family: Karla, sans-serif;
+  padding: 1rem;
+  /* background-image: linear-gradient(#ffffff, #e8f0fe); */
 }
-main {
-  max-width: 1200px;
+
+.gradient_color {
+  background-image: linear-gradient(whites, #121755);
+}
+
+.background_color {
+  background-color: rgb(232, 240, 254);
+  box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15);
+}
+
+/*******************
+      Nav Menu
+*******************/
+header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15);
+  /* box-shadow: 0 2px 4px rgb(79 119 205 / 80%); */
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+header h1 {
+  font-size: 1rem;
+}
+
+/* horizontal nav menu */
+nav li {
+  display: inline;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-bottom: 1px dotted rgb(0, 0, 0); /* gives you more control */
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  background: linear-gradient(rgb(255, 255, 255), rgb(145, 229, 222));
+  /* background: linear-gradient(rgb(255, 255, 255), rgb(173, 178, 230)); */
+}
+
+/*******************
+       About
+*******************/
+
+/* center intro and icons */
+p,
+.icons {
+  max-width: 25rem;
   margin: 0 auto;
 }
-h1 {
-  font-size: 90px;
-  font-weight: 300;
-  margin-bottom: 18px;
-  margin-top: 0;
-  padding-top: 100px;
+
+.icons {
+  list-style: none;
+  padding: 2rem 6rem 2rem 8rem;
+  height: 1.5rem;
 }
+
+/* w/inline-block, can set a width & height on the elements */
+/* top and bottom margins/paddings are also respected */
+.icons li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/*******************
+      Sections
+*******************/
+
+section {
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+  border-top: 1px dotted black;
+}
+
+.main_section {
+  padding-top: 2rem;
+  margin-bottom: 5rem;
+  /* margin-top: 65px; */
+}
+
 h1,
 h2 {
   color: rgb(35, 53, 53);
 }
+
 h2 {
-  font-size: 36px;
+  font-size: 1.25rem;
   font-weight: 400;
-  margin: 0 0 18px;
+  padding: 0 0.5rem;
 }
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 24px;
+
+/*******************
+      Project
+*******************/
+
+/* skill-listed items */
+.skill_items {
+  list-style-type: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
-.about {
-  width: 60%;
+
+.skill_items li {
+  margin: 0 0.5rem;
+  padding: 0 0.15rem;
+  color: rgb(0, 0, 0);
+  /* font-style: italic; */
+  font-size: 0.95rem; /* 22.8px */
 }
-.main-section {
-  margin-top: 65px;
+
+/* styling projects */
+.project_card {
+  height: 300px;
+  border: 2px dotted white;
+  border: 2px dotted rgb(112, 128, 144);
+  /* background-color: rgb(232, 240, 254); */
+  border-radius: 7px;
+  padding: 0.5rem;
+  width: 33.33%;
+  /* margin: 0.25rem; */
 }
-ul {
-  list-style-type: circle;
-  font-size: 18px;
+
+.inside_card {
+  height: 275px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 0.5rem;
 }
-.no-bullets {
-  list-style: none;
+
+#projects_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-form label {
+
+/*******************
+       Form
+*******************/
+
+/* center form */
+form {
+  max-width: 800px; /* experiment w/rem so media queries are relative */
+  width: 665px; /* experiment w/rem so media queries are relative */
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+label {
   color: rgb(55, 64, 77);
-  font-size: 18px;
+  font-size: 0.9rem;
+  padding: 0.7rem 0 0.1rem;
 }
+
 input,
 textarea {
   background-color: rgb(244, 245, 244);
   font-family: Karla, sans-serif;
-  font-size: 18px;
-  border: solid 0.15rem rgb(112, 128, 144);
+  font-size: 0.9rem;
+  border: solid 0.12rem rgb(85, 97, 109); /* rgb(112, 128, 144) */
   border-radius: 7px;
   padding: 4px 8px;
 }
+
 input {
-  height: 25px;
-  width: 250px;
-  margin: 0 7px 15px 0;
+  width: 275px;
 }
+
 textarea {
-  width: 530px;
-  height: 125px;
+  width: 560px;
+  height: 285px;
 }
+
+.message_area {
+  width: 560px;
+}
+
+/* positions label on top of input */
 .field_label,
 .field_input {
   display: block;
 }
-.field_label {
-  margin-bottom: 4px;
-}
-.field-inline {
+
+/* "Name" label element sits next to "Email" label element (no line break like block) */
+/* note: w/inline-block, can set a width & height on the elements */
+/* top and bottom margins/paddings are also respected */
+.field_inline {
   display: inline-block;
 }
+
+.field_message {
+  width: 560px;
+}
+
 button {
   font-family: Karla, sans-serif;
-  font-size: 17px;
+  font-size: 0.81rem;
   font-weight: bold;
   background-color: rgb(255, 255, 255);
   border: solid 1px rgb(92, 85, 137);
   border-radius: 7px;
   height: 40px;
-  width: 80px;
-  padding: 1px 3px;
-  margin-top: 10px;
+  width: 85px;
+  margin-top: 1rem;
   box-shadow: 0 2px 4px rgb(79 119 205 / 80%);
 }
-#messages h2 {
-  margin: 18px 0 0;
+
+/*******************
+      Messages
+*******************/
+
+/* style messages displayed when submit button */
+#messages {
+  margin-bottom: 0;
 }
+
 #messages a {
   color: rgb(54, 36, 173);
-  font-weight: bold;
+  /* font-weight: bold; */
   text-decoration-style: double;
   text-decoration-color: rgb(54, 36, 173);
 }
+
 #messages ul {
-  margin: 0 0 110px;
+  list-style-type: circle;
+  margin-left: 2.5rem;
 }
+
+#messages li {
+  height: 70px;
+  padding: 0 0.2rem 0.2rem;
+}
+
+/* spacing between message text and button "Remove" */
 span {
-  margin-right: 3px;
+  margin-right: 0.25rem;
 }
+
+/*******************
+       Footer
+*******************/
+
 footer {
-  background-color: rgb(213, 221, 236);
-  border-top: solid 0.12rem rgb(112, 128, 144);
+  background-color: rgb(228, 232, 240);
+  border-top: 2px dotted rgb(255, 255, 255);
+  border-bottom: 1px dotted rgb(112, 128, 144);
+  box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15);
+  height: 3rem;
 }
+
 footer p {
-  font-size: 20px;
-  padding: 20px 35px;
-  text-align: right;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  width: 8rem;
+  margin-right: 0.5rem;
+  height: 3rem;
 }
+
+/*******************
+    Media Queries
+*******************/
+
 /* responsive webpage */
-@media only screen and (max-width: 1375px) {
-  main {
-    margin-left: 60px;
+@media only screen and (max-width: 915px) {
+  html {
+    font-size: 21px;
   }
-  .highlights {
-    width: 60%;
+
+  /* body {
+    background-color: cyan;
+  } */
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li {
+    padding: 0;
+    padding-right: 1rem;
+  }
+
+  .icons {
+    padding: 1rem 0.3rem 0;
+    width: 9.6rem;
+    height: 3rem;
+  }
+
+  .about {
+    padding: 1rem;
+  }
+
+  .about p {
+    padding-top: 0.5rem;
+  }
+
+  /* displays 2 project cards */
+  .project_card {
+    width: 50%;
+  }
+
+  form {
+    width: 400px;
+    padding: 0.5rem;
+  }
+
+  input {
+    height: 2rem;
+  }
+
+  textarea {
+    width: 400px;
+    height: 10rem;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  html {
+    font-size: 19px;
+  }
+
+  /* body {
+    background-color: rgb(193, 241, 153);
+  } */
+
+  .icons {
+    padding: 0.3rem;
+    width: 10.5rem;
+    height: 3rem;
+  }
+
+  /* displays 1 project card */
+  .project_card {
+    width: 100%;
+    padding-top: 1.4rem;
+    padding-left: 4.5rem;
+  }
+
+  .inside_card {
+    width: 275px;
+    height: 250px;
+  }
+
+  form {
+    width: 295px;
+    padding: 0.5rem;
+  }
+
+  .field {
+    display: block;
+  }
+
+  textarea {
+    width: 275px;
   }
 }

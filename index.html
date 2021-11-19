@@ -13,63 +13,114 @@
 <body>
     <main>
         <div class="container">
-        <section class="about">
-            <h1>Asaia Palacios</h1>
 
-            <p>Hola. I'm a curious go-to learner of web dev and all things programming. Who knew that my stint as an English and Spanish teacher in the Czech Republic some eons ago would morph into this adventurous path. Can't say that I saw it coming, though it's been quite a ride. Nowadays, find me technically exploring what's under-the-hood of Web3 and frontend technologies.</p>
-        </section>
+        <!-- navigational header -->
+        <div class="gradient_color">
+            <header>
+                <h1>Asaia Palacios</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about_link">About</a></li>
+                        <li><a href="#work_link">Work</a></li>
+                        <li><a href="#contact_link">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
 
-        <section class="main-section highlights">
-            <h2>Highlights</h2>
-            <ul>
-                <li>Began with C, gained some Python and Ruby knowledge; now in JavaScript land</li>
-                <li>I enjoy navigating the command line</li>
-                <li>Git is fun, too, though I proceed with caution (because, well, I've heard horror stories)</li>
-            </ul>
-        </section>
+        <div class="background_color">
+            <!-- about section -->
+            <section class="about" id="about_link">
+                <!-- social media clickable icons -->
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/asaiapalacios/" target="_blank"><img src="https://svgrepo.com/show/316913/linkedin.svg" alt="Linkedin SVG icon" height="38" width="38"></a></li>
+                    
+                    <li><a href="https://github.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316906/github.svg" alt="Github SVG icon" height="38" width="38"></a></li>
+                    
+                    <li><a href="https://twitter.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316895/twitter.svg" alt="Twitter SVG icon" height="38" width="38"></a></li>
+                </ul>
 
-        <section id="skills" class="main-section">
-            <h2>Skills</h2>
-            <ul></ul>
-        </section>
+                <p>Hola! I'm a curious go-to learner of web dev and all things programming. Who knew that my stint as an English and Spanish teacher in the Czech Republic some eons ago would morph into this adventurous path. Can't say that I saw it coming, though it's been quite a ride. Nowadays, find me technically exploring what's under-the-hood of Web3 and frontend technologies.</p>
+            </section>
 
-        <section class="main-section">
-            <h2>Let's Connect</h2>
-            <ul class="no-bullets">
-                <li><a href="https://www.linkedin.com/in/asaiapalacios/" target="_blank"><img src="https://svgrepo.com/show/316913/linkedin.svg" alt="Linkedin SVG icon" height="37" width="37"></a></li>
-                
-                <li><a href="https://github.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316906/github.svg" alt="Github SVG icon" height="37" width="37"></a></li>
-                
-                <li><a href="https://twitter.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316895/twitter.svg" alt="Twitter SVG icon" height="37" width="37"></a></li>
-            </ul>
-        </section>
+            <section class="main_section highlights" id="work_link">
+                <h2>Projects</h2>
 
-        <section class="main-section">
-            <h2>Leave a Message</h2>
-            <form name="leave_message">
-                <div class="field field-inline">
-                    <label class="field_label">Name</label>
-                    <input class="field_input" type="text" name="name" required="true">
+                <div id="skills" class="main-section">
+                    <ul class="skill_items"></ul>
                 </div>
 
-                <div class="field field-inline">
-                    <label class="field_label">Email</label>
-                    <input class="field_input" type="email" name="email" required="true">
-                </div>
+                <!-- <ul>
+                    <li>Began with C, gained some Python and Ruby knowledge; now in JavaScript land</li>
+                    <li>I enjoy navigating the command line</li>
+                    <li>Git is fun, too, though I proceed with caution (because, well, I've heard horror stories)</li>
+                </ul> -->
 
-                <div class="field">
-                    <label class="field_label">Message</label>
-                    <textarea class="field_input text_box" name="message" required="true"></textarea>
+                <!-- projects section -->
+                <div id="projects_container">
+                    <div class="project_card">
+                        <div class="inside_card">
+                            <h4>Project 1</h4>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div class="inside_card">
+                            <h4>Project 2</h4>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div class="inside_card">
+                            <h4>Project 3</h4>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div class="inside_card">
+                            <h4>Project 4</h4>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div class="inside_card">
+                            <h4>Project 5</h4>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        
-        <section id="messages">
-            <h2>Messages</h2>
-            <ul></ul>
-        </section>
+            <!-- <section id="skills" class="main-section">
+                <h3>Skills</h3>
+                <ul class="skill_items"></ul>
+            </section> -->
+
+            <!-- form -->
+            <section class="main_section" id="contact_link">
+                <h2>Message Me</h2>
+                <form name="leave_message">
+                    <div class="field field_inline">
+                        <label class="field_label">Name</label>
+                        <input class="field_input" type="text" name="name" required="true">
+                    </div>
+
+                    <div class="field field_inline">
+                        <label class="field_label">Email</label>
+                        <input class="field_input" type="email" name="email" required="true">
+                    </div>
+
+                    <div class="message_area">
+                        <label class="field_label field_message">Message</label>
+                        <textarea class="field_input" name="message" required="true"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+            
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul></ul>
+            </section>
+        </div>
         </div>
     </main>
 
