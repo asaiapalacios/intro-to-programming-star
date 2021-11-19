@@ -13,7 +13,7 @@ const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
 // set innerHTML
-copyright.innerHTML = "&copy;" + thisYear + " Asaia Palacios";
+copyright.innerHTML = "&copy; " + "Asaia Palacios " + thisYear;
 
 // append the copyright element to the footer
 footer.appendChild(copyright);
@@ -21,7 +21,7 @@ footer.appendChild(copyright);
 // document.querySelector("footer").appendChild(document.createElement("p").innerHTML = "Asaia Palacios " + thisYear);
 
 // list technical skills
-const skills = ["HTML", "CSS", "JavaScript"];
+const skills = ["○ HTML", "○ CSS", "○ JavaScript"];
 
 // access id skills of index.html section
 const skillsSection = document.getElementById("skills");
