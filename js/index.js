@@ -1,4 +1,4 @@
-// Lesson 4.2 JavaScript and the DOM
+// LESSON 4.2: JavaScript and the DOM
 
 // create a new date object
 const today = new Date();
@@ -37,7 +37,7 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill); // Append <li> items to <ul> of section id "skills"
 }
 
-// Lesson 4.3 HTML Forms and DOM Practice
+// LESSON 4.3: HTML Forms and DOM Practice
 
 // select "leave_message" form by name attribute -> returns form element w/the name "leave_message"
 const messageForm = document.leave_message;
@@ -87,3 +87,50 @@ messageForm.addEventListener("submit", (e) => {
   e.target.reset();
   // messageForm.reset(); -> alternative option to clear form
 });
+
+// LESSON 6.1: Fetch GitHub Repo
+
+// a) REQUESTING DATA:
+
+// create an instance of the object XMLHttpRequest
+let githubRequest = new XMLHttpRequest();
+// prepare request to web server with URL endpoint
+githubRequest.open("GET", "https://api.github.com/users/asaiapalacios/repos");
+// send request
+githubRequest.send();
+
+// b) HANDLING RESPONSE FROM WEB SERVER:
+
+// add event listener with callback function (invoked when event is dispatched)
+// callback - programming you want to run when the web server sends back its response
+
+// option 1
+githubRequest.onload = function () {
+  // 4 = server has sent back its complete response
+  if (githubRequest.readyState === 4) {
+    // return status from server is OK
+    if (githubRequest.status === 200) {
+      console.log("success");
+      let repositories = JSON.parse(this.response); // parse JSON str response to JS object
+      console.log(repositories);
+
+      // c) DISPLAY REPOS IN LIST:
+      // select element <section> with id "projects"
+      const projectSection = document.getElementById("projects");
+      // query projectSection <ul> element
+      const projectList = projectSection.querySelector("ul");
+
+      // create a for-loop to iterate over array "repositories"
+      for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement("li"); // create list item
+        project.innerText = repositories[i].name; // set <li> inner text to current array element's name property
+        projectList.appendChild(project); // append <li> repo names to <ul> of element <section>
+      }
+    }
+  }
+};
+
+// option 2 (use addEventListener instead)
+// githubRequest.addEventListener("load", function() {
+// ~ same code block goes here ~
+// });

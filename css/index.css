@@ -114,7 +114,7 @@ section {
   border-top: 1px dotted black;
 }
 
-.main_section {
+.section_padding {
   padding-top: 2rem;
   margin-bottom: 5rem;
   /* margin-top: 65px; */
@@ -132,7 +132,7 @@ h2 {
 }
 
 /*******************
-      Project
+      Projects
 *******************/
 
 /* skill-listed items */
@@ -177,6 +177,20 @@ h2 {
   justify-content: center;
 }
 
+/*******************
+    GitHub Repos
+*******************/
+
+/* center bulleted <li> */
+#projects li {
+  max-width: 25rem;
+  margin: 0 auto;
+  list-style-type: circle;
+}
+
+#projects ul {
+  padding: 1rem 0 0 0;
+}
 /*******************
        Form
 *******************/
