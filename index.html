@@ -7,48 +7,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css">  
     </head>
 <body>
     <main>
-        <div class="container">
+        <!-- container -->
+        <div class="container"> 
 
         <!-- navigational header -->
-        <div class="gradient_color">
+        <div>
             <header>
                 <h1>Asaia Palacios</h1>
                 <nav>
                     <ul>
-                        <li><a href="#about_link">About</a></li>
-                        <li><a href="#work_link">Work</a></li>
-                        <li><a href="#contact_link">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experiences">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
 
-        <div class="background_color">
+        <div class="background-color">
             <!-- about section -->
-            <section class="about" id="about_link">
+            <section class="about" id="about">
                 <!-- social media clickable icons -->
+                <!-- height="32" width="32" -->
                 <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/asaiapalacios/" target="_blank"><img src="https://svgrepo.com/show/316913/linkedin.svg" alt="Linkedin SVG icon" height="38" width="38"></a></li>
+                    <li><a href="https://www.linkedin.com/in/asaiapalacios/" target="_blank"><img src="https://svgrepo.com/show/316913/linkedin.svg" alt="Linkedin SVG icon"></a></li>
+
+                    <li><a href="https://github.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316906/github.svg" alt="Github SVG icon"></a></li>
                     
-                    <li><a href="https://github.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316906/github.svg" alt="Github SVG icon" height="38" width="38"></a></li>
-                    
-                    <li><a href="https://twitter.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316895/twitter.svg" alt="Twitter SVG icon" height="38" width="38"></a></li>
+                    <li><a href="https://twitter.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316895/twitter.svg" alt="Twitter SVG icon"></a></li>
                 </ul>
 
-                <p>Hola! I'm a curious go-to learner of web dev and all things programming. Who knew that my stint as an English and Spanish teacher in the Czech Republic some eons ago would morph into this adventurous path. Can't say that I saw it coming, though it's been quite a ride. Nowadays, find me technically exploring what's under-the-hood of Web3 and frontend technologies.</p>
+                <p class="intro">Hola! I'm a curious go-to learner of web dev and all things programming. Who knew that my stint as an English and Spanish teacher in the Czech Republic some eons ago would morph into this adventurous path. Can't say that I saw it coming, though it's been quite a ride. Nowadays, find me technically exploring what's under-the-hood of Web3 and frontend technologies.</p>
             </section>
 
-            <section class="section_padding highlights" id="work_link">
-                <h2>Projects</h2>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul class="skill-items"></ul>
+            </section>
 
-                <div id="skills">
-                    <ul class="skill_items"></ul>
-                </div>
+            <section class="section-padding experience" id="experiences">
+                <h2>Experience</h2>
+
+                <!-- <div id="skills">
+                    <ul class="skill-items"></ul>
+                </div> -->
 
                 <!-- <ul>
                     <li>Began with C, gained some Python and Ruby knowledge; now in JavaScript land</li>
@@ -57,47 +66,40 @@
                 </ul> -->
 
                 <!-- projects section -->
-                <div id="projects_container">
-                    <div class="project_card">
-                        <div class="inside_card">
-                            <h4>Project 1</h4>
+                <div id="projects-container">
+                    <div class="project-card">
+                        <div class="inside-card">
+                            <h3>Project 1</h3>
                         </div>
                     </div>
-                    <div class="project_card">
-                        <div class="inside_card">
-                            <h4>Project 2</h4>
+                    <div class="project-card">
+                        <div class="inside-card">
+                            <h3>Project 2</h3>
                         </div>
                     </div>
-                    <div class="project_card">
-                        <div class="inside_card">
-                            <h4>Project 3</h4>
+                    <div class="project-card">
+                        <div class="inside-card">
+                            <h3>Project 3</h3>
                         </div>
                     </div>
-                    <div class="project_card">
-                        <div class="inside_card">
-                            <h4>Project 4</h4>
-                        </div>
-                    </div>
-                    <div class="project_card">
-                        <div class="inside_card">
-                            <h4>Project 5</h4>
+                    <div class="project-card">
+                        <div class="inside-card">
+                            <h3>Project 4</h3>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- <section id="skills" class="main-section">
-                <h3>Skills</h3>
-                <ul class="skill_items"></ul>
-            </section> -->
-
-            <section id="projects" class="section_padding">
-                <h2>GitHub Repos</h2>
+            <section id="projects" class="section-padding">
+                <h2>Projects</h2>
+                <div class="coding-journey">
+                    At Code the Dream, an org on a mission to prepare folks for a career in software development, our end-of-course track culminated into building our very own portfolio. We also worked with Fetch API, of which, the folowing GitHub portfolio repo is being displayed:
+                </div>
                 <ul></ul>
             </section>
 
             <!-- form -->
-            <section class="section_padding" id="contact_link">
+            <section id="contact">
                 <h2>Message Me</h2>
                 <form name="leave_message">
                     <div class="field field_inline">
@@ -129,7 +131,18 @@
         </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer-container">
+        <div class="icon-item">
+            <ul class="icons-in-footer">
+                <li><a href="https://www.linkedin.com/in/asaiapalacios/" target="_blank"><img src="https://svgrepo.com/show/316913/linkedin.svg" alt="Linkedin SVG icon"></a></li>
+
+                <li><a href="https://github.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316906/github.svg" alt="Github SVG icon"></a></li>
+                
+                <li><a href="https://twitter.com/asaiapalacios" target="_blank"><img src="https://svgrepo.com/show/316895/twitter.svg" alt="Twitter SVG icon"></a></li>
+            </ul>
+        </div>
+        <!-- in DOM -> <div class="copyright-item"></div> -->
+    </footer>
 
     <script src="js/index.js"></script>
 </body>

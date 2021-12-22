@@ -33,51 +33,61 @@ body {
   /* background-image: linear-gradient(#ffffff, #e8f0fe); */
 }
 
-.gradient_color {
-  background-image: linear-gradient(whites, #121755);
-}
-
-.background_color {
+.background-color {
   background-color: rgb(232, 240, 254);
-  box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15);
+  box-shadow: 0 2px 4px rgb(79 119 205 / 80%);
+  border-radius: 4px;
+  /* border: 1.5px solid rgb(3, 42, 170); */
+  /* box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15); */
 }
 
 /*******************
       Nav Menu
 *******************/
+
 header {
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15);
-  /* box-shadow: 0 2px 4px rgb(79 119 205 / 80%); */
+  border-radius: 7px;
+  border: 1.5px solid rgb(85, 97, 109);
+  box-shadow: 0 2px 4px rgb(79 119 205 / 80%);
   height: 2.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  /* box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15); */
 }
 
 header h1 {
   font-size: 1rem;
+  font-weight: 500;
+  color: rgb(54, 36, 173);
+  /* color: rgb(3, 42, 170); */
 }
 
 /* horizontal nav menu */
 nav li {
   display: inline;
-  padding: 0;
   padding-left: 1rem;
 }
 
 nav a {
+  font-size: 0.85rem;
   color: rgb(0, 0, 0);
+  /* font-weight: 600; */
   text-decoration: none;
   border-bottom: 1px dotted rgb(0, 0, 0); /* gives you more control */
-  padding-bottom: 3px;
+  /* padding-bottom: 3px; */
+  padding: 5px;
 }
 
 nav a:hover {
-  background: linear-gradient(rgb(255, 255, 255), rgb(145, 229, 222));
-  /* background: linear-gradient(rgb(255, 255, 255), rgb(173, 178, 230)); */
+  border: 2px dotted rgb(0, 0, 0);
+  border-radius: 5px;
+  transform: translateY(-10px);
+  background: linear-gradient(rgb(255, 255, 255), rgb(199, 214, 245));
+  /* background: linear-gradient(rgb(255, 255, 255), rgb(199, 205, 240)); */
 }
 
 /*******************
@@ -85,16 +95,20 @@ nav a:hover {
 *******************/
 
 /* center intro and icons */
-p,
+.intro,
 .icons {
   max-width: 25rem;
   margin: 0 auto;
 }
 
+.intro {
+  font-size: 0.9rem;
+}
+
 .icons {
   list-style: none;
-  padding: 2rem 6rem 2rem 8rem;
-  height: 1.5rem;
+  padding-top: 27px;
+  text-align: center;
 }
 
 /* w/inline-block, can set a width & height on the elements */
@@ -104,93 +118,135 @@ p,
   margin-right: 1rem;
 }
 
+.icons img {
+  width: 32px; /* widens spacing between icons */
+  height: 32px;
+}
+
 /*******************
       Sections
 *******************/
 
 section {
-  padding-top: 1rem;
+  padding-top: 2rem;
   margin-bottom: 3rem;
   border-top: 1px dotted black;
 }
 
-.section_padding {
+.section-padding {
   padding-top: 2rem;
-  margin-bottom: 5rem;
-  /* margin-top: 65px; */
+  margin-bottom: 4rem;
 }
 
 h1,
 h2 {
-  color: rgb(35, 53, 53);
+  font-family: Roboto, sans-serif;
 }
 
 h2 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding: 0 0.5rem;
+  font-size: 0.97rem;
+  font-weight: 500;
+  padding: 0 2rem;
+  color: rgb(64, 75, 87);
 }
 
 /*******************
-      Projects
+       Skills
 *******************/
 
 /* skill-listed items */
-.skill_items {
+.skill-items {
   list-style-type: none;
   padding: 1rem;
   display: flex;
   justify-content: center;
 }
 
-.skill_items li {
+.skill-items li {
   margin: 0 0.5rem;
-  padding: 0 0.15rem;
+  padding: 0.2rem 0.5rem;
+  background-color: rgb(244, 245, 244);
   color: rgb(0, 0, 0);
-  /* font-style: italic; */
-  font-size: 0.95rem; /* 22.8px */
+  font-style: italic;
+  font-size: 0.75rem;
+  border: 1.5px solid rgb(3, 42, 170);
+  border-radius: 7px;
+  box-shadow: 0 2px 4px rgb(79 119 205 / 45%);
 }
 
-/* styling projects */
-.project_card {
+/*******************
+      Experience
+*******************/
+
+.experience h2 {
+  padding-bottom: 1rem;
+}
+
+#projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#projects-container h3 {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgb(85, 97, 109);
+}
+
+/* styling experience cards */
+.project-card {
   height: 300px;
-  border: 2px dotted white;
   border: 2px dotted rgb(112, 128, 144);
-  /* background-color: rgb(232, 240, 254); */
   border-radius: 7px;
   padding: 0.5rem;
   width: 33.33%;
-  /* margin: 0.25rem; */
+  margin: 0.25rem;
 }
 
-.inside_card {
+.inside-card {
   height: 275px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
+  border: 0.12rem solid rgb(85, 97, 109);
   border-radius: 5px;
   padding: 0.5rem;
 }
 
-#projects_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 /*******************
-    GitHub Repos
+      Projects
 *******************/
+
+.coding-journey {
+  max-width: 25rem;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+}
 
 /* center bulleted <li> */
 #projects li {
-  max-width: 25rem;
-  margin: 0 auto;
-  list-style-type: circle;
+  max-width: 12.5rem;
+  margin: 14px auto;
+  padding-left: 1.7rem;
+  padding-right: 0.5rem;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  list-style-type: none;
+  color: rgb(54, 36, 173);
+  font-style: italic;
+  font-size: 0.8rem;
+  outline-style: double;
 }
 
-#projects ul {
-  padding: 1rem 0 0 0;
+#projects li::marker {
+  color: rgb(54, 36, 173);
 }
+
+/* bullet circle is included inside double outline box */
+/* #projects ul {
+  list-style-position: inside;
+} */
+
 /*******************
        Form
 *******************/
@@ -269,13 +325,14 @@ button {
 /* style messages displayed when submit button */
 #messages {
   margin-bottom: 0;
+  padding-bottom: 2rem;
 }
 
 #messages a {
   color: rgb(54, 36, 173);
-  /* font-weight: bold; */
   text-decoration-style: double;
   text-decoration-color: rgb(54, 36, 173);
+  /* font-weight: 600; */
 }
 
 #messages ul {
@@ -284,41 +341,68 @@ button {
 }
 
 #messages li {
-  height: 70px;
   padding: 0 0.2rem 0.2rem;
+  font-size: 0.9rem;
+  list-style-position: inside;
+  /* height: 70px; */
 }
 
 /* spacing between message text and button "Remove" */
 span {
-  margin-right: 0.25rem;
+  margin-right: 0.35rem;
 }
 
 /*******************
        Footer
 *******************/
 
-footer {
+.footer-container {
   background-color: rgb(228, 232, 240);
-  border-top: 2px dotted rgb(255, 255, 255);
-  border-bottom: 1px dotted rgb(112, 128, 144);
-  box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 0.15);
+  box-shadow: 0 2px 4px rgb(79 119 205 / 50%);
+  border: 1.5px solid rgb(3, 42, 170);
+  border-radius: 4px;
   height: 3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border-top: 2px solid rgb(255, 255, 255);
+  border-bottom: 1px dotted rgb(112, 128, 144);
+  border-left: 1px dotted rgb(112, 128, 144);
+  border-right: 1px dotted rgb(112, 128, 144); */
+  /* box-shadow: 0px 4px 24px 0 rgba(79, 114, 205, 20%); */
 }
 
-footer p {
-  padding: 1rem 0;
+.icon-item li {
+  display: inline-block;
+}
+
+/* .icons-in-footer {
+  list-style: none;
+} */
+
+.icons-in-footer img {
+  width: 37px; /* gives spacing between icons */
+  height: 27px;
+}
+
+.copyright-item {
   font-size: 0.8rem;
-  width: 8rem;
-  margin-right: 0.5rem;
-  height: 3rem;
+  display: flex;
+  gap: 10px; /* gap between copyright name and year */
+}
+
+.copyright-item div {
+  display: inline-block;
 }
 
 /*******************
     Media Queries
 *******************/
 
-/* responsive webpage */
-@media only screen and (max-width: 915px) {
+/* responsive webpage 915px */
+@media only screen and (max-width: 950px) {
   html {
     font-size: 21px;
   }
@@ -332,27 +416,13 @@ footer p {
     flex-direction: column;
   }
 
-  nav li {
-    padding: 0;
-    padding-right: 1rem;
-  }
-
-  .icons {
-    padding: 1rem 0.3rem 0;
-    width: 9.6rem;
-    height: 3rem;
-  }
-
-  .about {
-    padding: 1rem;
-  }
-
-  .about p {
-    padding-top: 0.5rem;
+  .icons img {
+    width: 30px; /* gives spacing between icons */
+    height: 30px;
   }
 
   /* displays 2 project cards */
-  .project_card {
+  .project-card {
     width: 50%;
   }
 
@@ -370,9 +440,25 @@ footer p {
     height: 10rem;
     margin-right: 0;
   }
+
+  #messages li {
+    padding-bottom: 0px;
+    height: 63px;
+  }
+
+  .icons-in-footer img {
+    width: 28px; /* gives spacing between icons */
+    height: 23px;
+  }
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 815px) {
+  nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
   html {
     font-size: 19px;
   }
@@ -381,22 +467,49 @@ footer p {
     background-color: rgb(193, 241, 153);
   } */
 
+  .intro,
   .icons {
-    padding: 0.3rem;
-    width: 10.5rem;
-    height: 3rem;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .about {
+    padding-bottom: 1rem;
+  }
+
+  .icons {
+    padding-top: 27px;
+    text-align: center;
+    /* height: 2.3rem; */
+  }
+
+  .icons img {
+    width: 27px; /* gives spacing between icons */
+    height: 29px;
+  }
+
+  h2 {
+    padding: 0 1.7rem;
   }
 
   /* displays 1 project card */
-  .project_card {
-    width: 100%;
-    padding-top: 1.4rem;
-    padding-left: 4.5rem;
+  .project-card {
+    width: 70%;
   }
 
-  .inside_card {
-    width: 275px;
-    height: 250px;
+  /* .inside-card {
+    width: 200px;
+    height: 200px;
+  } */
+
+  .coding-journey {
+    max-width: 19rem;
+    margin: 0 auto;
+  }
+
+  #projects li {
+    max-width: 12rem;
+    margin-left: 3rem;
   }
 
   form {
@@ -410,5 +523,19 @@ footer p {
 
   textarea {
     width: 275px;
+  }
+
+  #messages li {
+    height: 60px;
+  }
+
+  button {
+    width: 74px;
+    height: 36px;
+  }
+
+  .icons-in-footer img {
+    width: 26px; /* gives spacing between icons */
+    height: 21px;
   }
 }

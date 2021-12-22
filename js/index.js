@@ -9,19 +9,27 @@ const thisYear = today.getFullYear();
 // select footer element
 const footer = document.querySelector("footer");
 
-// create a new paragraph 'p' element
-const copyright = document.createElement("p");
+// create a new div element
+const copyright = document.createElement("div");
 
 // set innerHTML
-copyright.innerHTML = "&copy; " + "Asaia Palacios " + thisYear;
+copyright.innerHTML = "&copy; " + "Asaia Palacios ";
 
 // append the copyright element to the footer
 footer.appendChild(copyright);
 // LONG version example below (without variables):
 // document.querySelector("footer").appendChild(document.createElement("p").innerHTML = "Asaia Palacios " + thisYear);
 
-// list technical skills
-const skills = ["○ HTML", "○ CSS", "○ JavaScript"];
+// new div element for thisYear (helps with spacing in CSS file between copyright and year)
+const copyrightYear = document.createElement("div");
+copyrightYear.innerHTML = thisYear;
+copyright.appendChild(copyrightYear);
+
+// add a class to DOM element copyright (to horizontally display footer items inside a flex container in CSS file)
+copyright.className = "copyright-item";
+
+// list technical skills ○
+const skills = ["JavaScript", "HTML", "CSS", "Git", "CLI"];
 
 // access id skills of index.html section
 const skillsSection = document.getElementById("skills");
@@ -121,62 +129,23 @@ function displayRepos(data) {
   const projectSection = document.getElementById("projects");
   // query projectSection <ul> element
   const projectList = projectSection.querySelector("ul");
+  // access <div> element within Project's <section>
+  const journey = document.querySelector(".coding-journey");
 
   // create a for-loop to iterate over array "data"
-  for (let i = 0; i < data.length; i++) {
-    const project = document.createElement("li"); // create list item
-    project.innerText = data[i].name; // set <li> inner text to current array element's name property
-    projectList.appendChild(project); // append <li> repo names to <ul> of element <section>
-  }
+  data.forEach((repo) => {
+    // console.log(repo);
+
+    if (repo.name === "intro-to-programming-star") {
+      // console.log(repo.name);
+
+      const project = document.createElement("li"); // create list item (li) element
+      project.innerText = repo.name; // set <li> inner text to current array element's name property
+      // console.log(project);
+
+      projectList.appendChild(project); // append <li> repo names to <ul> of <section> element
+      journey.appendChild(projectList); // append bullet-listed repos to <p> of Project's <section>
+      // console.log("success!");
+    }
+  });
 }
-
-// LESSON 6.1: Fetch GitHub Repo with XMLHTTP Request
-
-// a) REQUESTING DATA:
-
-// Create an instance of the object XMLHttpRequest
-// const githubRequest = new XMLHttpRequest();
-
-// Prepare request to web server with URL endpoint
-// githubRequest.open("GET", "https://api.github.com/users/asaiapalacios/repos");
-
-// Send request
-// githubRequest.send();
-
-// b) HANDLING RESPONSE FROM WEB SERVER:
-
-// Add event listener with callback function (invoked when event is dispatched)
-// Callback - programming you want to run when the web server sends back its response
-
-// ALTERNATE WAY -> githubRequest.addEventListener("readystatechange", function() {...});
-
-// githubRequest.onload = function () {
-// Server has sent back its complete response = 4; return status from server is OK
-// if (this.readyState === 4 && this.status === 200) {
-// console.log("success");
-
-// Parse JSON str response to JS object
-// const repositories = JSON.parse(this.response);
-// console.log(repositories);
-
-// c) DISPLAY REPOS IN LIST:
-// Select element <section> with id "projects"
-// const projectSection = document.getElementById("projects");
-
-// Query projectSection <ul> element
-// const projectList = projectSection.querySelector("ul");
-
-// Create a for-loop to iterate over array "repositories"
-// for (let i = 0; i < repositories.length; i++) {
-
-// Create list item
-// const project = document.createElement("li");
-
-// Set <li> inner text to current array element's name property
-// project.innerText = repositories[i].name;
-
-// Append <li> repo names to <ul> of element <section>
-// projectList.appendChild(project);
-// }
-// }
-// };
