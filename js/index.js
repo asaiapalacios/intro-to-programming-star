@@ -136,7 +136,10 @@ function displayRepos(data) {
   data.forEach((repo) => {
     // console.log(repo);
 
-    if (repo.name === "intro-to-programming-star") {
+    if (
+      repo.name === "intro-to-programming-star" ||
+      repo.name === "intro-to-programming-section-5"
+    ) {
       // console.log(repo.name);
 
       const project = document.createElement("li"); // create list item (li) element

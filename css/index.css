@@ -86,7 +86,7 @@ nav a:hover {
   border: 2px dotted rgb(0, 0, 0);
   border-radius: 5px;
   transform: translateY(-10px);
-  background: linear-gradient(rgb(255, 255, 255), rgb(199, 214, 245));
+  /* background: linear-gradient(rgb(255, 255, 255), rgb(199, 214, 245)); */
   /* background: linear-gradient(rgb(255, 255, 255), rgb(199, 205, 240)); */
 }
 
@@ -227,8 +227,8 @@ h2 {
 #projects li {
   max-width: 12.5rem;
   margin: 14px auto;
-  padding-left: 1.7rem;
-  padding-right: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
   padding-top: 0.15rem;
   padding-bottom: 0.15rem;
   list-style-type: none;
@@ -261,7 +261,7 @@ form {
 
 label {
   color: rgb(55, 64, 77);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding: 0.7rem 0 0.1rem;
 }
 
@@ -292,6 +292,7 @@ textarea {
 .field_label,
 .field_input {
   display: block;
+  font-size: 0.9rem;
 }
 
 /* "Name" label element sits next to "Email" label element (no line break like block) */
@@ -307,7 +308,7 @@ textarea {
 
 button {
   font-family: Karla, sans-serif;
-  font-size: 0.81rem;
+  font-size: 0.75rem;
   font-weight: bold;
   background-color: rgb(255, 255, 255);
   border: solid 1px rgb(92, 85, 137);
@@ -441,6 +442,11 @@ span {
     margin-right: 0;
   }
 
+  button {
+    height: 37px;
+    width: 78px;
+  }
+
   #messages li {
     padding-bottom: 0px;
     height: 63px;
@@ -510,6 +516,8 @@ span {
   #projects li {
     max-width: 12rem;
     margin-left: 3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   form {
@@ -530,8 +538,8 @@ span {
   }
 
   button {
-    width: 74px;
-    height: 36px;
+    width: 70px;
+    height: 35px;
   }
 
   .icons-in-footer img {
